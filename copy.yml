@@ -4,5 +4,5 @@
  - hosts: webserver
    tasks:
     - copy:
-       src: /pipe.txt
-       dest: /
+       src: /tomcat
+       dest: /var/lib/tomcat/webapps

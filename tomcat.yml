@@ -1,0 +1,18 @@
+---
+
+#this is my first playbook
+
+ - hosts: webserver
+   tasks:
+   - yum:
+     name: tomcat
+     state: latest
+
+   - service:
+     name: tomcat
+     state: started
+
+
+
+
+
