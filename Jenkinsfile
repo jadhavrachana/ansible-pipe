@@ -39,7 +39,7 @@ pipeline {
 
             steps {
                     sh "scp copy.yml root@192.168.1.101:/etc/ansible/"
-                    sh "ssh root@192.168.1.101 "ansible-playbook copy.yml""
+                     ssh root@192.168.1.101 "ansible-playbook copy.yml"
                 //
             }
        }
