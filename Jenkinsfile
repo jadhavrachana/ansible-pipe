@@ -47,15 +47,6 @@ pipeline {
        }
 
 
-      stage ('Deploy') {
-
-            steps {
-               sh "scp target/*.war root@192.168.1.101:/var/lib/tomcat/webapps"
-
-            }
-
-        }
-
     }
 }
 
