@@ -7,7 +7,7 @@ pipeline {
         stage('SCM') {
 
             steps {
-                    git "https://github.com/jadhavrachana/tomcat.git"
+                    git "https://github.com/jadhavrachana/ansible-pipe.git"
                 //
             }
         }
@@ -38,7 +38,8 @@ pipeline {
        stage('ansible') {
 
             steps {
-                    sh "scp "
+                    sh "scp copy.yml root@192.168.1.101:/etc/ansible/"
+                    sh "ssh root@192.168.1.101"
                 //
             }
        }
