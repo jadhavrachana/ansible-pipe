@@ -4,13 +4,15 @@
 
  - hosts: webserver
    tasks:
-   - yum:
-     name: tomcat
-     state: latest
+   - name: install latest tomcat
+     yum:
+      name: tomcat
+      state: latest
 
-   - service:
-     name: tomcat
-     state: started
+   - name: service started
+     service:
+      name: tomcat
+      state: started
 
 
 
